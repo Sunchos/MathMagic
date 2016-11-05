@@ -1,8 +1,14 @@
-#pragma once
-#include <math.h>
-#include <iostream>
+#include "pch.h"
+#include "MathFunctions.h"
 
-inline int TriangleArea(double sideTriangle)
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// Implementation of the Math Magic functions.
+//
+
+namespace  mm
 {
-	return static_cast<int>(((sqrt(3)) * pow(sideTriangle, 2)) / 4);
+double TriangleArea(double sideTriangle)
+{
+	return (((sqrt(3)) * pow(sideTriangle, 2)) / 4);
 }
+} // namespace mm.

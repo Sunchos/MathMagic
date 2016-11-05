@@ -2,24 +2,26 @@
 #include <boost/test/unit_test.hpp>
 #include "MathFunctions.h"
 
-BOOST_AUTO_TEST_SUITE(triangle)
+/////////////////////////////////////////////////////////////////////////////////////////////
+// UnitTest.
+//
+
+BOOST_AUTO_TEST_SUITE(triangleareaTest)
 
 BOOST_AUTO_TEST_CASE(squareTest1)
 {
-	if (TriangleArea(4) != 6)
-		BOOST_ERROR("Square equals: " + std::to_string(TriangleArea(4)));
+	BOOST_CHECK(abs(mm::TriangleArea(4) - 6.928) < 0.001);
 }
 
 BOOST_AUTO_TEST_CASE(squareTest2)
 {
-	if (TriangleArea(-4) != 6)
-		BOOST_ERROR("Square equals: " + std::to_string(TriangleArea(-4)));
+	if (mm::TriangleArea(0) != 0)
+		BOOST_ERROR("Square equals: " + std::to_string(mm::TriangleArea(0)));
 }
 
 BOOST_AUTO_TEST_CASE(squareTest3)
 {
-	if (TriangleArea(-4) != 6)
-		BOOST_ERROR("Square equals: " + std::to_string(TriangleArea(-4)));
+	BOOST_CHECK(abs(mm::TriangleArea(-5) - 10.825) < 0.001);
 }
 
 BOOST_AUTO_TEST_SUITE_END()

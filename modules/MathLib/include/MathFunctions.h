@@ -2,7 +2,11 @@
 #include <math.h>
 #include <iostream>
 
-inline int TriangleArea(double sideTriangle)
+////////////////////////////////////////////////////////////////////////////////
+// Interface of the MathMagic functions.
+//
+
+namespace mm
 {
-	return static_cast<int>(((sqrt(3)) * pow(sideTriangle, 2)) / 4);
-}
+double TriangleArea(double sideTriangle);
+} // namespace mm.

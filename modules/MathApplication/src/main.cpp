@@ -7,6 +7,6 @@ int main()
 	std::cout << "Set the parameter a side: ";
 	std::cin >> dd;
 
-	std::cout << "Square Triangle is: " << TriangleArea(dd) << std::endl;
+	std::cout << "Square Triangle is: " << mm::TriangleArea(dd) << std::endl;
 	return 0;
 }
